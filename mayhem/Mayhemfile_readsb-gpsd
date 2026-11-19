@@ -1,0 +1,9 @@
+project: savantenvs/readsb
+target: readsb-gpsd
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/readsb-gpsd/testsuite
+cmds:
+  - cmd: /mayhem/readsb-netfuzz connect gpsd_in @@
+    afl: true
+    timeout: 5

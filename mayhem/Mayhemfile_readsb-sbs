@@ -1,0 +1,9 @@
+project: savantenvs/readsb
+target: readsb-sbs
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/readsb-sbs/testsuite
+cmds:
+  - cmd: /mayhem/readsb-netfuzz listen --net-sbs-in-port @@
+    afl: true
+    timeout: 5

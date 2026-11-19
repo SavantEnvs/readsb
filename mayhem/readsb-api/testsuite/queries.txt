@@ -1,0 +1,5 @@
+GET /?circle=52.3,3.9,100&filter_squawk=7700 HTTP/1.1
+
+GET /?box=50,55,0,10&find_hex=4840d6,40621d&jv2 HTTP/1.1
+Connection: close
+

@@ -1,0 +1,9 @@
+project: savantenvs/readsb
+target: readsb-state
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/readsb-state/testsuite
+cmds:
+  - cmd: /mayhem/readsb-netfuzz state @@
+    afl: true
+    timeout: 5

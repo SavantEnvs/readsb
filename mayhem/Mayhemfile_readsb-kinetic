@@ -1,0 +1,9 @@
+project: savantenvs/readsb
+target: readsb-kinetic
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/readsb-kinetic/testsuite
+cmds:
+  - cmd: /mayhem/readsb-netfuzz listen --net-kinetic-port @@
+    afl: true
+    timeout: 5

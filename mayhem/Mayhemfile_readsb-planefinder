@@ -1,0 +1,9 @@
+project: savantenvs/readsb
+target: readsb-planefinder
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/readsb-planefinder/testsuite
+cmds:
+  - cmd: /mayhem/readsb-netfuzz connect planefinder_in @@
+    afl: true
+    timeout: 5

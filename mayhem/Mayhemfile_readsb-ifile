@@ -1,0 +1,9 @@
+project: savantenvs/readsb
+target: readsb-ifile
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/readsb-ifile/testsuite
+cmds:
+  - cmd: /mayhem/readsb-fuzz --device-type ifile --ifile @@
+    afl: true
+    timeout: 5

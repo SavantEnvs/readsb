@@ -1,0 +1,9 @@
+project: savantenvs/readsb
+target: readsb-raw
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/readsb-raw/testsuite
+cmds:
+  - cmd: /mayhem/readsb-netfuzz listen --net-ri-port @@
+    afl: true
+    timeout: 5

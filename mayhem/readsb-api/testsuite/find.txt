@@ -1,0 +1,4 @@
+GET /?closest=52.3,3.9,50&filter_callsign_prefix=KLM&filter_type=B738 HTTP/1.1
+
+GET /?find_callsign=KLM1023&find_reg=PH-ABC&find_type=A320&zstd HTTP/1.1
+

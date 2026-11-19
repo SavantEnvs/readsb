@@ -1,0 +1,9 @@
+project: savantenvs/readsb
+target: readsb-beast
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/readsb-beast/testsuite
+cmds:
+  - cmd: /mayhem/readsb-netfuzz listen --net-bi-port @@ --net-ingest --net-receiver-id
+    afl: true
+    timeout: 5

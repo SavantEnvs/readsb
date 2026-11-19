@@ -1,0 +1,9 @@
+project: savantenvs/readsb
+target: readsb-asterix
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/readsb-asterix/testsuite
+cmds:
+  - cmd: /mayhem/readsb-netfuzz listen --net-asterix-in-port @@
+    afl: true
+    timeout: 5
